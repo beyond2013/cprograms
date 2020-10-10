@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-void n2w(int rem);
+char* n2w(int rem);
 int main()
 { 
 
@@ -30,8 +30,7 @@ divisor=10;
 for(loop=1;loop<=digits; loop++)
 {
 	remainder = number % divisor;
-	printf("\n%d %% %d = %d ",number, divisor, remainder);
-  n2w(remainder);	
+	printf("\n%d %% %d = %d \t %s",number, divisor, remainder, n2w(remainder));
 	number/=divisor;
 }
 
@@ -40,9 +39,10 @@ for(loop=1;loop<=digits; loop++)
 return 0;
 }
 
-void n2w(int rem)
+char* n2w(int rem)
 {
 	char units[9][6]= {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-	printf("\t %s", units[rem-1]);
+	char* result= units[rem-1];
+	return(result);
 }
 

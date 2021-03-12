@@ -41,8 +41,10 @@ printf("\n");
 char* n2w(int rem)
 {
 	char units[10][10]= {"\0","one\0", "two\0", "three\0", "four\0", "five\0", "six\0", "seven\0", "eight\0", "nine\0"};
-	char tens[18][11]= {"ten", "eleven", "tweleve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
-	                 "eighteen", "nineteen", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+
+/*	char tens[18][11]= {"ten", "eleven", "tweleve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
+	                 "eighteen", "nineteen", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"}; */
+
 	char* result = units[rem];
 	printf("\nin function %s",  result);
 	return(result);

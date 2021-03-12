@@ -34,7 +34,7 @@ int main(void)
 		composite = 0;
 		printf("\n Enter a number\t ");
 		scanf("%d", &num);
-    if(isprime(num))
+                 if(isprime(num))
 		{
 			printf("\n %d is prime", num);
 		}

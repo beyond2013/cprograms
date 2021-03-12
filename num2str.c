@@ -21,7 +21,7 @@ int main()
 		divisor*=10;
 	}
 
-	printf("\n%d has %d digits",number, digits);
+	/* printf("\n%d has %d digits",number, digits); */
 
 	divisor=10;
 
@@ -29,21 +29,22 @@ int main()
 	{
 		remainder = number % divisor;
 		printf("\n%d %% %d = %d \t %s",number, divisor, remainder, n2w(remainder));
+		/* printf("\n in main %s\n\n", n2w(remainder)); */
 		number/=divisor;
 	}
 
-
+printf("\n");
 
 	return 0;
 }
 
 char* n2w(int rem)
 {
-	char units[20][10]= {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"
-                       "eleven", "tweleve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
-	                     "eighteen", "nineteen", "twenty"}
-	char tens[9][8]= {"ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"};
-	char* result= units[rem-1];
+	char units[10][10]= {"\0","one\0", "two\0", "three\0", "four\0", "five\0", "six\0", "seven\0", "eight\0", "nine\0"};
+	char tens[18][11]= {"ten", "eleven", "tweleve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
+	                 "eighteen", "nineteen", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+	char* result = units[rem];
+	printf("\nin function %s",  result);
 	return(result);
 }
 
